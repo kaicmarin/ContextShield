@@ -1,0 +1,132 @@
+/* ============================================================================
+   ARQUIVO: contextshield/src/index.css
+   Folha de estilos do projeto ContextShield.
+   Os comentários abaixo explicam a organização dos estilos; nenhuma regra
+   original foi alterada.
+   ============================================================================ */
+/* Regra especial do CSS: @tailwind base; controla o escopo/configuração deste bloco. */
+@tailwind base;
+/* Regra especial do CSS: @tailwind components; controla o escopo/configuração deste bloco. */
+@tailwind components;
+/* Regra especial do CSS: @tailwind utilities; controla o escopo/configuração deste bloco. */
+@tailwind utilities;
+
+/* Regra especial do CSS: @layer base { controla o escopo/configuração deste bloco. */
+@layer base {
+/* Inicia o bloco de estilos para o seletor 'html'. */
+  html {
+/* Define a propriedade CSS '-webkit-text-size-adjust' neste ponto. */
+    -webkit-text-size-adjust: 100%;
+  }
+
+/* Inicia o bloco de estilos para o seletor 'body'. */
+  body {
+/* Regra especial do CSS: @apply bg-canvas font-sans text-[16px] leading-7 text-ink-900 antialiased; controla o escopo/configuração deste bloco. */
+    @apply bg-canvas font-sans text-[16px] leading-7 text-ink-900 antialiased;
+/* Define a propriedade CSS 'overflow-x' neste ponto. */
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+/* Inicia o bloco de estilos para o seletor 'h3'. */
+  h3 {
+/* Regra especial do CSS: @apply font-display; controla o escopo/configuração deste bloco. */
+    @apply font-display;
+  }
+
+  *:focus-visible {
+/* Define a propriedade CSS 'outline' neste ponto. */
+    outline: 2px solid #2f63f6;
+/* Define a propriedade CSS 'outline-offset' neste ponto. */
+    outline-offset: 2px;
+/* Define a propriedade CSS 'border-radius' neste ponto. */
+    border-radius: 4px;
+  }
+
+/* Inicia o bloco de estilos para o seletor '::selection'. */
+  ::selection {
+/* Define a propriedade CSS 'background' neste ponto. */
+    background: #dfe8fd;
+/* Define a propriedade CSS 'color' neste ponto. */
+    color: #06101b;
+  }
+
+/* Regra especial do CSS: @media (prefers-reduced-motion: reduce) { controla o escopo/configuração deste bloco. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+/* Define a propriedade CSS 'animation-duration' neste ponto. */
+      animation-duration: 0.01ms !important;
+/* Define a propriedade CSS 'animation-iteration-count' neste ponto. */
+      animation-iteration-count: 1 !important;
+/* Define a propriedade CSS 'transition-duration' neste ponto. */
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Regra especial do CSS: @layer components { controla o escopo/configuração deste bloco. */
+@layer components {
+/* Inicia o bloco de estilos para o seletor '.eyebrow'. */
+  .eyebrow {
+/* Regra especial do CSS: @apply text-micro font-medium uppercase text-subtle; controla o escopo/configuração deste bloco. */
+    @apply text-micro font-medium uppercase text-subtle;
+  }
+
+/* Inicia o bloco de estilos para o seletor '.id-tag'. */
+  .id-tag {
+/* Regra especial do CSS: @apply font-mono text-[12px] tracking-tight; controla o escopo/configuração deste bloco. */
+    @apply font-mono text-[12px] tracking-tight;
+  }
+
+/* Inicia o bloco de estilos para o seletor '.tabular'. */
+  .tabular {
+/* Define a propriedade CSS 'font-variant-numeric' neste ponto. */
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Signature motif: faint layered contour used behind ContextShield surfaces */
+/* Inicia o bloco de estilos para o seletor '.contour'. */
+  .contour {
+/* Define a propriedade CSS 'background-image' neste ponto. */
+    background-image: radial-gradient(circle at 100% 0%, transparent 0 119px, rgba(11, 154, 174, 0.1) 120px 121px, transparent 122px),
+      radial-gradient(circle at 100% 0%, transparent 0 199px, rgba(11, 154, 174, 0.08) 200px 201px, transparent 202px),
+      radial-gradient(circle at 100% 0%, transparent 0 289px, rgba(47, 99, 246, 0.07) 290px 291px, transparent 292px);
+  }
+
+/* Inicia o bloco de estilos para o seletor '.contour-dark'. */
+  .contour-dark {
+/* Define a propriedade CSS 'background-image' neste ponto. */
+    background-image: radial-gradient(circle at 100% 0%, transparent 0 139px, rgba(125, 211, 224, 0.12) 140px 141px, transparent 142px),
+      radial-gradient(circle at 100% 0%, transparent 0 239px, rgba(125, 211, 224, 0.08) 240px 241px, transparent 242px),
+      radial-gradient(circle at 100% 0%, transparent 0 359px, rgba(148, 178, 255, 0.07) 360px 361px, transparent 362px);
+  }
+
+/* Inicia o bloco de estilos para o seletor '.grid-faint'. */
+  .grid-faint {
+/* Define a propriedade CSS 'background-image' neste ponto. */
+    background-image: linear-gradient(rgba(10, 25, 40, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(10, 25, 40, 0.045) 1px, transparent 1px);
+/* Define a propriedade CSS 'background-size' neste ponto. */
+    background-size: 32px 32px;
+  }
+
+/* Inicia o bloco de estilos para o seletor '.grid-faint-dark'. */
+  .grid-faint-dark {
+/* Define a propriedade CSS 'background-image' neste ponto. */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+/* Define a propriedade CSS 'background-size' neste ponto. */
+    background-size: 32px 32px;
+  }
+
+/* Inicia o bloco de estilos para o seletor '.scrollbar-thin'. */
+  .scrollbar-thin {
+/* Define a propriedade CSS 'scrollbar-width' neste ponto. */
+    scrollbar-width: thin;
+/* Define a propriedade CSS 'scrollbar-color' neste ponto. */
+    scrollbar-color: rgb(120 132 150 / 0.35) transparent;
+  }
+}
